@@ -35,3 +35,6 @@ This project is intended to provide a minimal groundwork for building React clie
             `$ npm install -g flow-typed`
             `$ flow-typed install`
             except immutable_v3.x.x.js which is linked on the issue above
+    * Testing
+        * Jest
+        * Enzyme
