@@ -7,9 +7,10 @@ This project is intended to provide a minimal groundwork for building React clie
 * `$ npm install`
 
 ## Commands
+* `$ npm run build` - builds assets and drops them 
 * `$ npm run dev` - runs webpack-dev-server
-* `$ npm run build` - builds assets and drops them into /dist folder (configured in webpack)
-# note: running dev destroys the dist folder... this is not done on purpose.
+into /dist folder (configured in webpack)
+    * note: running dev server destroys the dist folder... this is not done on purpose.
 
 ## The Tech
 * Runtime
