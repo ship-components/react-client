@@ -8,7 +8,6 @@ export default function itemReducer(state = Immutable.fromJS({}), action) {
             return state;
 
         case Constants.READ:
-            console.warn('READ', action.body, state.toJS())
             return Immutable.fromJS(action.body);
 
         case Constants.UPDATE:

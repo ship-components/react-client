@@ -33,7 +33,7 @@ class ItemList extends React.Component<Props> {
                     )
                 : <li>No items.</li>}
                 </ul>
-                </div>);
+            </div>);
     }
 }
   

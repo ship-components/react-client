@@ -1,5 +1,5 @@
 /**
- * Test Link component
+ * Test App component
  */
 
 import React from 'react';

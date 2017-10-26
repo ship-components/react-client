@@ -26,6 +26,9 @@ This project is intended to provide a minimal groundwork for building React clie
             * strict-loader
     * Babel
         * presets: [env, react]
+    * CSS - NOT IMPLEMENTED
+        * autoprefixer adds vendor prefixes, using data from Can I Use.
+        * cssmodules
     * ESLint
     * Flow
         * .flowconfig is in place but currently shelved because of issues with Immutable.js types

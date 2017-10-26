@@ -13,7 +13,8 @@ export default class App extends React.Component<Props> {
     componentDidMount() {
         ItemActions.read()
             .catch(error => {
-                console.warn(error);
+                // console.warn(error);
+                // swallow error for now
             });
     }
 
