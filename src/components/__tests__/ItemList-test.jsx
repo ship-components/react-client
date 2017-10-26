@@ -3,12 +3,11 @@
  */
 
 import React from 'react';
-import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import {Provider} from 'react-redux';
 import Immutable from 'immutable';
-import TestUtils from 'react-dom/test-utils';
-const ItemList = require('../ItemList').default;
+import ItemList from '../ItemList';
 
 describe('ItemList', () => {
   const initialState = Immutable.fromJS({items: require('../../mockserver/responses/read.json')});
@@ -17,25 +16,27 @@ describe('ItemList', () => {
 
   beforeEach(()=>{
     store = mockStore(initialState)
-    wrapper = shallow(<ItemList store={store} />);  
   });
 
   it('renders', () => {
-    expect(wrapper.length).toBe(1);
+    wrapper = mount(<ItemList store={store} />);
+    expect(wrapper.find(ItemList).length).toBe(1);
   });
 
   it('maps store state to props', () => {
+    wrapper = shallow(<ItemList store={store} />);      
     expect(wrapper.prop('items')).toEqual(initialState.get('items'));
   })
 
-  // it('renders without error', () => {
-  //   let wrapper = mount(
-  //       <Provider store={Store}>
-  //           <ItemList />
-  //       </Provider>
-  //   );
+  it('renders without error', () => {
+    let wrapper = mount(
+        <Provider store={store}>
+            <ItemList />
+        </Provider>
+    );
 
-  //   expect(wrapper).toBeDefined();
-  // });
+    expect(wrapper.find(ItemList).length).toBe(1);
+    // expect(wrapper.find(ItemList).prop('items')).toEqual(initialState.get('items'));    
+  });
 
 });

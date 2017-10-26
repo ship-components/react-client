@@ -1,0 +1,12 @@
+.title {
+  color: green;
+}
+
+.list {
+  color: red;
+  font-size: 12px;
+}
+
+.listItem {
+  padding: 12px;
+}

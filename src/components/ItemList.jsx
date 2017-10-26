@@ -5,6 +5,7 @@
 import * as React from "react";
 import type { List, Map } from 'immutable'
 import { connect } from 'react-redux';
+import css from './ItemList.css';
 
 // This is our select function that will extract from the state the data slice we want to expose
 // through props to our component.
@@ -23,13 +24,18 @@ class ItemList extends React.Component<Props> {
     render() {
         return (
             <div>
-                <h1>
+                <h1 className={css.title}>
                     Items
                 </h1>
-                <ul>
+                <ul className={css.list}>
                 {this.props.items && this.props.items.size ?
                     this.props.items.map((item: Item) => 
-                        <li key={item.get('id')}>{item.get('name')}</li>
+                        <li 
+                            key={item.get('id')}
+                            className={css.listItem}
+                        >
+                            {item.get('name')}
+                        </li>
                     )
                 : <li>No items.</li>}
                 </ul>

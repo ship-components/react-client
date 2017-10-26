@@ -4,9 +4,9 @@
 
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
+import App from '../App';
 
 describe('App', () => {
-  const App = require('../App').default;
 
   it('should render without error', () => {
     let element = React.createElement(
