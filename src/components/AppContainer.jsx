@@ -4,7 +4,6 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, IndexRoute } from 'react-router-dom';
 
-import Home from './Home';
 import ItemList from './ItemList';
 
 import Store from '../store';
