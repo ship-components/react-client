@@ -4,13 +4,13 @@
 
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
-import App from '../App';
+import AppContainer from '../AppContainer';
 
-describe('App', () => {
+describe('AppContainer', () => {
 
   it('should render without error', () => {
     let element = React.createElement(
-       App
+       AppContainer
     );
 
     expect(() => TestUtils.renderIntoDocument(element))
